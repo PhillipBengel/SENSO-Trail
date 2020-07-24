@@ -664,8 +664,7 @@ function pano2vrSkin(player,base) {
 		}
 		me._linkoffnen.onclick=function (e) {
 			player.setVariableValue('SENSI', false);
-			/*	player.openUrl("https:\/\/nature40.github.io\/SENSO-Trail-App\/map",""); */
-			window.open("https://nature40.github.io/SENSO-Trail-App/map", "_system");
+			player.openUrl("https:\/\/nature40.github.io\/SENSO-Trail-App","");
 			player.setVariableValue('SENSI', false);
 			me._sensimenu2.style[domTransition]='none';
 			me._sensimenu2.style.visibility='hidden';
