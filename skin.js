@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.5/17926
 // Filename: SENSO-Trail Skin.ggsk
-// Generated 2020-07-27T15:24:07
+// Generated 2020-07-27T17:00:45
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Station', 1, 0);
@@ -2180,7 +2180,7 @@ function pano2vrSkin(player,base) {
 		el=me._forschung=document.createElement('div');
 		el.ggId="Forschung";
 		el.ggDx=5;
-		el.ggDy=55;
+		el.ggDy=56;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_container ";
@@ -2756,6 +2756,15 @@ function pano2vrSkin(player,base) {
 			me._station1q.style[domTransition]='none';
 			me._station1q.style.visibility=(Number(me._station1q.style.opacity)>0||!me._station1q.style.opacity)?'inherit':'hidden';
 			me._station1q.ggVisible=true;
+			me._station2up1.style[domTransition]='none';
+			me._station2up1.style.visibility='hidden';
+			me._station2up1.ggVisible=false;
+			me._station2up2.style[domTransition]='none';
+			me._station2up2.style.visibility='hidden';
+			me._station2up2.ggVisible=false;
+			me._station2q.style[domTransition]='none';
+			me._station2q.style.visibility='hidden';
+			me._station2q.ggVisible=false;
 		}
 		me._station1.onmouseover=function (e) {
 			me._station1__img.style.visibility='hidden';
@@ -4642,13 +4651,13 @@ function pano2vrSkin(player,base) {
 		el.ggTextDiv=els;
 		el.ggId="Fortschritt";
 		el.ggDx=3;
-		el.ggDy=-178;
+		el.ggDy=-177;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
-		hs+='height : 178px;';
+		hs+='height : 219px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
@@ -4663,7 +4672,7 @@ function pano2vrSkin(player,base) {
 		hs+='left: 0px;';
 		hs+='top:  0px;';
 		hs+='width: 324px;';
-		hs+='height: 178px;';
+		hs+='height: 219px;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
 		hs+='font-size: 15px;';
@@ -4705,75 +4714,6 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me._forschungsmenu.appendChild(me._fortschritt);
-		el=me._forschungsfortschritt=document.createElement('div');
-		els=me._forschungsfortschritt__text=document.createElement('div');
-		el.className='ggskin ggskin_textdiv';
-		el.ggTextDiv=els;
-		el.ggId="Forschungsfortschritt";
-		el.ggDx=0;
-		el.ggDy=-289;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_text ";
-		el.ggType='text';
-		hs ='';
-		hs+='height : 20px;';
-		hs+='left : -10000px;';
-		hs+='position : absolute;';
-		hs+='top : -10000px;';
-		hs+='visibility : inherit;';
-		hs+='width : 198px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style[domTransform + 'Origin']='50% 50%';
-		hs ='position:absolute;';
-		hs += 'box-sizing: border-box;';
-		hs+='cursor: default;';
-		hs+='left: 0px;';
-		hs+='top:  0px;';
-		hs+='width: 198px;';
-		hs+='height: 20px;';
-		hs+='border: 0px solid #000000;';
-		hs+='color: rgba(255,255,255,1);';
-		hs+='font-size: 16px;';
-		hs+='font-weight: 600;';
-		hs+='text-align: center;';
-		hs+='white-space: nowrap;';
-		hs+='padding: 0px 1px 0px 1px;';
-		hs+='overflow: hidden;';
-		hs+='overflow-y: auto;';
-		els.setAttribute('style',hs);
-		els.innerHTML="Forschungsfortschritt";
-		el.appendChild(els);
-		me._forschungsfortschritt.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._forschungsfortschritt.ggUpdatePosition=function (useTransition) {
-			if (useTransition==='undefined') {
-				useTransition = false;
-			}
-			if (!useTransition) {
-				this.style[domTransition]='none';
-			}
-			if (this.parentNode) {
-				var pw=this.parentNode.clientWidth;
-				var w=this.offsetWidth + 0;
-					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
-				var ph=this.parentNode.clientHeight;
-				var h=this.offsetHeight;
-					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
-			}
-		}
-		me._forschungsmenu.appendChild(me._forschungsfortschritt);
 		me.divSkin.appendChild(me._forschungsmenu);
 		el=me._kartenmenu=document.createElement('div');
 		el.ggId="KartenMenu";
@@ -4873,7 +4813,7 @@ function pano2vrSkin(player,base) {
 		el.appendChild(els);
 		el.ggSubElement = els;
 		el.ggId="Svg 1";
-		el.ggDx=1;
+		el.ggDx=0;
 		el.ggDy=10;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
@@ -4976,6 +4916,111 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me._kartenmenu.appendChild(me._transekten);
+		el=me._temp=document.createElement('div');
+		els=me._temp__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnIHN0YW5kYWxvbmU9J25vJz8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgo8c3ZnIGhlaWdodD0iNDU2LjA1MTQybW0iIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIiBpbmtzY2FwZTpleHBvcnQteWRwaT0iOTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgd2lkdGg9IjI5OC43NDg4N21tIiBpbmtzY2FwZTp2ZXJzaW'+
+			'9uPSIwLjkyLjQgKDVkYTY4OWMzMTMsIDIwMTktMDEtMTQpIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHNvZGlwb2RpOmRvY25hbWU9IitUZW1wLnN2ZyIgaWQ9InN2ZzE2NDMiIGlua3NjYXBlOmV4cG9ydC1maWxlbmFtZT0iQzpcVXNlcnNcbWF4LWtcRGVza3RvcFxTRU5TTy1UcmFpbFxLYXJ0ZW5cK1RyYW5zZWt0ZW4ucG5nIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgdmlld0Jv'+
+			'eD0iMCAwIDI5OC43NDg4OCA0NTYuMDUxNDIiIGlua3NjYXBlOmV4cG9ydC14ZHBpPSI5NiIgdmVyc2lvbj0iMS4xIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8ZGVmcyBpZD0iZGVmczE2MzciPgogIDxsaW5lYXJHcmFkaWVudCBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiIGlkPSJsaW5lYXJHcmFkaWVudDE0MzUiPgogICA8c3RvcCBzdHlsZT0ic3RvcC1jb2xvcjojZmY2NjAwO3N0b3Atb3BhY2l0eToxOyIgb2Zmc2V0PSIwIiBpZD0ic3RvcDE0MzEiLz4KICAgPHN0b3Agc3R5bGU9In'+
+			'N0b3AtY29sb3I6I2ZmNjYwMDtzdG9wLW9wYWNpdHk6MDsiIG9mZnNldD0iMSIgaWQ9InN0b3AxNDMzIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIiBpZD0ibGluZWFyR3JhZGllbnQxMzQyIj4KICAgPHN0b3Agc3R5bGU9InN0b3AtY29sb3I6IzVmZDNiYztzdG9wLW9wYWNpdHk6MTsiIG9mZnNldD0iMCIgaWQ9InN0b3AxMzM4Ii8+CiAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiM1ZmQzYmM7c3RvcC1vcGFjaXR5OjA7IiBvZmZzZXQ9IjEiIGlkPSJzdG9wMTM0MCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPGxpbmVh'+
+			'ckdyYWRpZW50IGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIgaWQ9ImxpbmVhckdyYWRpZW50MTMxMC03Ij4KICAgPHN0b3Agc3R5bGU9InN0b3AtY29sb3I6IzgwMDAwMDtzdG9wLW9wYWNpdHk6MTsiIG9mZnNldD0iMCIgaWQ9InN0b3AxMzA2Ii8+CiAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiM4MDAwMDA7c3RvcC1vcGFjaXR5OjA7IiBvZmZzZXQ9IjEiIGlkPSJzdG9wMTMwOCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPG1hcmtlciBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZSIgcmVmWD0iMCIgb3JpZW50PSJhdXRvIiByZWZZPSIwIiBpZD0iQXJyb3cxTGVuZCIgaW5rc2NhcGU6aXNzdG'+
+			'9jaz0idHJ1ZSIgaW5rc2NhcGU6c3RvY2tpZD0iQXJyb3cxTGVuZCI+CiAgIDxwYXRoIHN0eWxlPSJmaWxsOiM0ZDRkNGQ7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiM0ZDRkNGQ7c3Ryb2tlLXdpZHRoOjEuMDAwMDAwMDNwdDtzdHJva2Utb3BhY2l0eToxIiBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiBpZD0icGF0aDE3ODEiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjgsMCwwLC0wLjgsLTEwLDApIiBkPSJNIDAsMCA1LC01IC0xMi41LDAgNSw1IFoiLz4KICA8L21hcmtlcj4KICA8bWFya2VyIHN0eWxlPSJvdmVyZmxvdzp2aXNpYmxlIiByZWZYPSIwIiBv'+
+			'cmllbnQ9ImF1dG8iIHJlZlk9IjAiIGlkPSJBcnJvdzFMc3RhcnQiIGlua3NjYXBlOmlzc3RvY2s9InRydWUiIGlua3NjYXBlOnN0b2NraWQ9IkFycm93MUxzdGFydCI+CiAgIDxwYXRoIHN0eWxlPSJmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjEuMDAwMDAwMDNwdDtzdHJva2Utb3BhY2l0eToxIiBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiBpZD0icGF0aDE3NzgiIHRyYW5zZm9ybT0ibWF0cml4KDAuOCwwLDAsMC44LDEwLDApIiBkPSJNIDAsMCA1LC01IC0xMi41LDAgNSw1IFoiLz4KICA8L2'+
+			'1hcmtlcj4KICA8aW5rc2NhcGU6cGF0aC1lZmZlY3QgdmVydGljYWxfcGF0dGVybj0iZmFsc2UiIHByb3BfdW5pdHM9ImZhbHNlIiBwcm9wX3NjYWxlPSIwLjI2NDU4MzMzIiBjb3B5dHlwZT0ic2luZ2xlX3N0cmV0Y2hlZCIgdGFuZ19vZmZzZXQ9IjAiIGlkPSJwYXRoLWVmZmVjdDEzNzAiIHNwYWNpbmc9IjAiIHBhdHRlcm49Ik0gMCw1IEMgMCwyLjI0IDIuMjQsMCA1LDAgNy43NiwwIDEwLDIuMjQgMTAsNSAxMCw3Ljc2IDcuNzYsMTAgNSwxMCAyLjI0LDEwIDAsNy43NiAwLDUgWiIgZnVzZV90b2xlcmFuY2U9IjAiIGlzX3Zpc2libGU9InRydWUiIHNjYWxlX3lfcmVsPSJmYWxzZSIgbm9ybWFs'+
+			'X29mZnNldD0iMCIgZWZmZWN0PSJza2VsZXRhbCIvPgogIDxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNsaXBQYXRoMTQ0NSI+CiAgIDxyZWN0IHJ5PSIwIiBzdHlsZT0iZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjMzODEzNzQ4O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjAuOTkzMDU1NTgiIHk9IjI4Ni45NDM5NyIgeD0iLTQuNDA5OTQ2OSIgd2lkdGg9IjYuOTMyMzAzNCIgaWQ9InJlY3QxNDQ3IiBoZWlnaHQ9IjQuMTkyNzkxIiByeD0iMCIvPg'+
+			'ogIDwvY2xpcFBhdGg+CiAgPGNsaXBQYXRoIGNsaXBQYXRoVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY2xpcFBhdGgzMzIxIj4KICAgPHJlY3Qgc3R5bGU9Im9wYWNpdHk6MC41MTA5OTk5NztmaWxsOm5vbmU7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjAuNDI1NTg2MTM7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIiByeT0iMS41ODA5Mzc5IiB4PSI3NTMuOTA3MjkiIHk9IjM4Ni4wNDIzIiB3aWR0aD0iMjAuMDAzOTczIiBpZD0icmVjdDMzMjMiIGhlaWdodD0i'+
+			'MjAuMzI2NjE2IiByeD0iMi42Mjg2Njc2Ii8+CiAgPC9jbGlwUGF0aD4KICA8Y2xpcFBhdGggY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJjbGlwUGF0aDEwOTciPgogICA8cmVjdCBzdHlsZT0ib3BhY2l0eTowLjUxMDk5OTk3O2ZpbGw6bm9uZTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MC40MjU1ODYxMztzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowO3N0cm9rZS1vcGFjaXR5OjEiIHJ5PSIxLjU4MDkzNzkiIHg9IjUzNi4yNzA4MSIgeT0iLTEyMi4zNTAzMSIgd2lkdGg9IjIwLj'+
+			'AwMzk3MyIgaWQ9InJlY3QxMDk5IiBoZWlnaHQ9IjIwLjMyNjYxNiIgcng9IjIuNjI4NjY3NiIvPgogIDwvY2xpcFBhdGg+CiAgPGNsaXBQYXRoIGNsaXBQYXRoVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY2xpcFBhdGgxMTE5Ij4KICAgPHJlY3Qgcnk9IjEuNTgwOTM3OSIgc3R5bGU9Im9wYWNpdHk6MC41MTA5OTk5NztmaWxsOm5vbmU7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjAuNDI1NTg2MTM7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIiB5PSI3NC4zNDYx'+
+			'NTMiIHg9IjMzMC45OTg3MiIgd2lkdGg9IjIwLjAwMzk3MyIgaWQ9InJlY3QxMTIxIiBoZWlnaHQ9IjIwLjMyNjYxNiIgcng9IjIuNjI4NjY3NiIvPgogIDwvY2xpcFBhdGg+CiAgPGNsaXBQYXRoIGNsaXBQYXRoVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY2xpcFBhdGgxNDExIj4KICAgPHJlY3Qgc3R5bGU9Im9wYWNpdHk6MC45OTE5OTk5NztmaWxsOiMwMDg4YWE7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiM0NDc4MjE7c3Ryb2tlLXdpZHRoOjMuNjg3MDAwMDQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5OjEuODQzNTAwMDUsIDEuODQzNTAwMDU7c3Ryb2tlLWRhc2hvZm'+
+			'ZzZXQ6MDtzdHJva2Utb3BhY2l0eTowIiB5PSI1NjUuODY2MDkiIHg9Ijc5OS40ODI4NSIgd2lkdGg9Ijk0LjY2Njg2MiIgaWQ9InJlY3QxNDEzIiBoZWlnaHQ9IjY3LjM1MTkyMSIvPgogIDwvY2xpcFBhdGg+CiAgPHJhZGlhbEdyYWRpZW50IGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIgZng9Ii0xODkuNTcwNjIiIHI9IjQ5LjQ5OTcyNyIgaWQ9InJhZGlhbEdyYWRpZW50MTMxMiIgY3g9Ii0xODkuNTcwNjIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeT0iMTE2LjQwMzgyIiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQxMzEwLTciIGZ5PSIxMTYuNDAzODIiIGdyYWRpZW50'+
+			'VHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMC44MTg1Nzk3LDI2NC4wNjY1OCwtMTk5LjA3MDIxKSIvPgogIDxyYWRpYWxHcmFkaWVudCBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiIGZ4PSIxODYuNDc3NTgiIHI9IjQ5LjQ5OTcyNyIgaWQ9InJhZGlhbEdyYWRpZW50MTM0NCIgY3g9IjE4Ni40Nzc1OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN5PSIxNDAuNzI1MzUiIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDEzNDIiIGZ5PSIxNDAuNzI1MzUiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMC44MTg1Nzk3OCwtMzUuMjc1MjY3LC0zMDMuMTY5MjEpIi8+CiAgPH'+
+			'JhZGlhbEdyYWRpZW50IGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIgZng9IjgzLjIwNDY0MyIgcj0iNDkuMDE3MjI3IiBpZD0icmFkaWFsR3JhZGllbnQxNDM3IiBjeD0iODMuMjA0NjQzIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3k9IjIxNS41NjA4MSIgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50MTQzNSIgZnk9IjIxNS41NjA4MSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwwLjgxNjc5NDA1LDEzMi4zNTYxNywtMjU5LjI3MzQzKSIvPgogPC9kZWZzPgogPHNvZGlwb2RpOm5hbWVkdmlldyBpbmtzY2FwZTp6b29tPSIwLjM1MzU1MzQiIGlua3NjYXBlOmN5'+
+			'PSI5ODcuNDU3MjciIGlua3NjYXBlOndpbmRvdy14PSItOSIgYm9yZGVyb3BhY2l0eT0iMS4wIiBpbmtzY2FwZTp3aW5kb3cteT0iLTkiIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiIGlua3NjYXBlOnNuYXAtb3RoZXJzPSJ0cnVlIiBmaXQtbWFyZ2luLXJpZ2h0PSIwIiBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE5MjAiIGlua3NjYXBlOmd1aWRlLWJib3g9InRydWUiIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0ibW0iIGlkPSJiYXNlIiBmaXQtbWFyZ2luLWxlZnQ9IjAiIHNob3dndWlkZXM9InRydWUiIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiIHNob3'+
+			'dncmlkPSJmYWxzZSIgcGFnZWNvbG9yPSIjZmZmZmZmIiBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIiBpbmtzY2FwZTpzbmFwLWdsb2JhbD0iZmFsc2UiIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMDEiIGZpdC1tYXJnaW4tYm90dG9tPSIwIiBpbmtzY2FwZTpzbmFwLWJib3g9InRydWUiIGlua3NjYXBlOmN4PSI0NzcuNTg4NTUiIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIgaW5rc2NhcGU6c25hcC1ub2Rlcz0idHJ1ZSIgZml0LW1hcmdpbi10b3A9IjAiLz4KIDxtZXRhZGF0YSBpZD0ibWV0YWRhdGExNjQwIj4KICA8cmRmOlJERj4KICAgPGNjOldvcmsgcmRmOmFib3V0'+
+			'PSIiPgogICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICA8ZGM6dHlwZSByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIi8+CiAgICA8ZGM6dGl0bGUvPgogICA8L2NjOldvcms+CiAgPC9yZGY6UkRGPgogPC9tZXRhZGF0YT4KIDxnIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE5LjMxOTkzNyw3NS4xMDQyMykiIGlua3NjYXBlOmxhYmVsPSJFYmVuZSAxIj4KICA8Zmxvd1Jvb3Qgc3R5bGU9ImZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbD'+
+			'tmb250LXNpemU6NDBweDtsaW5lLWhlaWdodDoxLjI1O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7ZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiBpZD0iZmxvd1Jvb3QyMzQ0IiB4bWw6c3BhY2U9InByZXNlcnZlIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjI2NDU4MzMzLDAsMCwwLjI2NDU4MzMzLDAsMTQ5KSI+CiAgIDxmbG93UmVnaW9uIGlkPSJmbG93UmVnaW9uMjM0NiI+CiAgICA8cmVjdCB4PSI1Mi4xNDI4NTciIHk9IjMzNS43OTg2MSIgd2lkdGg9IjEzMi44NTcxNSIgaWQ9InJlY3QyMzQ4IiBoZWlnaHQ9'+
+			'IjQ1LjcxNDI4NyIvPgogICA8L2Zsb3dSZWdpb24+CiAgIDxmbG93UGFyYSBpZD0iZmxvd1BhcmEyMzUwIi8+CiAgPC9mbG93Um9vdD4KICA8Zmxvd1Jvb3Qgc3R5bGU9ImZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjE2cHg7bGluZS1oZWlnaHQ6MS4yNTtmb250LWZhbWlseTpzYW5zLXNlcmlmOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J3NhbnMtc2VyaWYsIE5vcm1hbCc7Zm9udC12YXJpYW50LWxpZ2F0dXJlczpub3JtYWw7Zm9udC12YXJpYW50LWNhcHM6bm9ybWFsO2Zvbn'+
+			'QtdmFyaWFudC1udW1lcmljOm5vcm1hbDtmb250LWZlYXR1cmUtc2V0dGluZ3M6bm9ybWFsO3RleHQtYWxpZ246c3RhcnQ7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7d3JpdGluZy1tb2RlOmxyLXRiO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZSIgaWQ9ImZsb3dSb290MjQyMi00LTEtNi0xIiB4bWw6c3BhY2U9InByZXNlcnZlIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjUyOTA2MDIsMCwwLDAuNTI5MDYwMiwwLjkwODc3Njk0LDEwMy4zNDU0NykiPgogICA8Zmxvd1JlZ2lvbiBzdHlsZT0iZm9udC1zdHlsZTpub3JtYWw7'+
+			'Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTZweDtmb250LWZhbWlseTpzYW5zLXNlcmlmOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J3NhbnMtc2VyaWYsIE5vcm1hbCc7Zm9udC12YXJpYW50LWxpZ2F0dXJlczpub3JtYWw7Zm9udC12YXJpYW50LWNhcHM6bm9ybWFsO2ZvbnQtdmFyaWFudC1udW1lcmljOm5vcm1hbDtmb250LWZlYXR1cmUtc2V0dGluZ3M6bm9ybWFsO3RleHQtYWxpZ246c3RhcnQ7d3JpdGluZy1tb2RlOmxyLXRiO3RleHQtYW5jaG9yOnN0YXJ0IiBpZD0iZmxvd1JlZ2lvbjI0MTgtNy03LT'+
+			'ItOCI+CiAgICA8cmVjdCBzdHlsZT0iZm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTZweDtmb250LWZhbWlseTpzYW5zLXNlcmlmOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J3NhbnMtc2VyaWYsIE5vcm1hbCc7Zm9udC12YXJpYW50LWxpZ2F0dXJlczpub3JtYWw7Zm9udC12YXJpYW50LWNhcHM6bm9ybWFsO2ZvbnQtdmFyaWFudC1udW1lcmljOm5vcm1hbDtmb250LWZlYXR1cmUtc2V0dGluZ3M6bm9ybWFsO3RleHQtYWxpZ246c3RhcnQ7d3JpdGluZy1tb2RlOmxyLXRiO3Rl'+
+			'eHQtYW5jaG9yOnN0YXJ0IiB5PSIyNy4yMjcxOTgiIHg9IjUwLjcxNDI4NyIgd2lkdGg9IjE3Mi4xNDI4NSIgaWQ9InJlY3QyNDE2LTYtNS0xLTUiIGhlaWdodD0iMjQuOTk5OTk2Ii8+CiAgIDwvZmxvd1JlZ2lvbj4KICAgPGZsb3dQYXJhIGlkPSJmbG93UGFyYTI0MzgtMy05LTctOSIvPgogIDwvZmxvd1Jvb3Q+CiAgPHJlY3Qgc3R5bGU9Im9wYWNpdHk6MTtmaWxsOnVybCgjcmFkaWFsR3JhZGllbnQxMzEyKTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC45NjQ5OTk5NztzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG'+
+			'9mZnNldDowO3N0cm9rZS1vcGFjaXR5OjEiIHJ5PSIxLjcwMTQzNzYiIHg9IjI1LjQ3ODczNyIgeT0iLTE0My44MjEzOCIgd2lkdGg9Ijk4LjAzNDQ1NCIgaWQ9InJlY3QxMjg4IiBoZWlnaHQ9IjgwLjA3Mzk0NCIgcng9IjEuNzAxNDM3NiIgdHJhbnNmb3JtPSJyb3RhdGUoOTApIi8+CiAgPHJlY3Qgc3R5bGU9Im9wYWNpdHk6MTtmaWxsOnVybCgjcmFkaWFsR3JhZGllbnQxMzQ0KTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC45NjQ5OTk5NztzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowO3N0cm9rZS1v'+
+			'cGFjaXR5OjEiIHJ5PSIxLjcwMTQzNzYiIHg9IjEwMi4xODUwOSIgeT0iLTIyOC4wMTEyNiIgd2lkdGg9Ijk4LjAzNDQ1NCIgaWQ9InJlY3QxMjg4LTUiIGhlaWdodD0iODAuMDczOTUyIiByeD0iMS43MDE0Mzc2IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCkiLz4KICA8cmVjdCBzdHlsZT0ib3BhY2l0eToxO2ZpbGw6dXJsKCNyYWRpYWxHcmFkaWVudDE0MzcpO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjk2NDk5OTk3O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjA7c3Ryb2tlLW9wYWNpdHk6MSIgcnk9Ij'+
+			'EuNzAxNDM3NiIgeD0iMTY2LjU0MzU4IiB5PSItMTIzLjI0MTYyIiB3aWR0aD0iOTguMDM0NDU0IiBpZD0icmVjdDEyODgtNS05IiBoZWlnaHQ9IjgwLjA3Mzk1OSIgcng9IjEuNzAxNDM3NiIgdHJhbnNmb3JtPSJyb3RhdGUoOTApIi8+CiA8L2c+CiA8c3R5bGUgaWQ9InN0eWxlMiIgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0NjQ2NDY7fQoJLnN0MXtmaWxsOiNEMUQxRDE7fQo8L3N0eWxlPgogPHN0eWxlIGlkPSJzdHlsZTExMTUiIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojNDY0NjQ2O30KCS5zdDF7ZmlsbDojRDFEMUQxO30KPC9zdHlsZT4KIDxzdHlsZSBpZD0ic3R5bGUx'+
+			'MTMzIiB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0QxRDFEMTt9Cgkuc3Qxe2ZpbGw6IzQ1NDU0NTt9Cjwvc3R5bGU+Cjwvc3ZnPgo=';
+		me._temp__img.setAttribute('src',hs);
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="+Temp";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 456px;';
+		hs+='left : 47px;';
+		hs+='position : absolute;';
+		hs+='top : 130px;';
+		hs+='visibility : hidden;';
+		hs+='width : 299px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._temp.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._temp.ggUpdatePosition=function (useTransition) {
+		}
+		me._kartenmenu.appendChild(me._temp);
+		el=me._tt=document.createElement('div');
+		els=me._tt__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._tt__img.setAttribute('src',basePath + 'images/tt.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="+TT";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 456px;';
+		hs+='left : 62px;';
+		hs+='position : absolute;';
+		hs+='top : 64px;';
+		hs+='visibility : hidden;';
+		hs+='width : 299px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._tt.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._tt.ggUpdatePosition=function (useTransition) {
+		}
+		me._kartenmenu.appendChild(me._tt);
 		el=me._karteschlieen=document.createElement('div');
 		els=me._karteschlieen__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
@@ -4991,7 +5036,7 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="Karteschlie\xdfen";
-		el.ggDx=-8;
+		el.ggDx=0;
 		el.ggDy=285;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
@@ -5065,9 +5110,9 @@ function pano2vrSkin(player,base) {
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
 		el.ggId="TransektenZeigen";
-		el.ggDx=26;
-		el.ggDy=264;
-		el.ggParameter={ rx:0,ry:0,a:120,sx:1,sy:1 };
+		el.ggDx=51;
+		el.ggDy=282;
+		el.ggParameter={ rx:0,ry:0,a:90,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
@@ -5135,16 +5180,10 @@ function pano2vrSkin(player,base) {
 		els['ondragstart']=function() { return false; };
 		el.appendChild(els);
 		el.ggSubElement = els;
-		elo=me._transektenzeigen2__imgo=document.createElement('img');
-		elo.className='ggskin ggskin_svg';
-		me._transektenzeigen2__imgo.setAttribute('src',basePath + 'images/transektenzeigen2__o.svg');
-		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
-		elo['ondragstart']=function() { return false; };
-		el.appendChild(elo);
 		el.ggId="TransektenZeigen2";
-		el.ggDx=26;
-		el.ggDy=264;
-		el.ggParameter={ rx:0,ry:0,a:120,sx:1,sy:1 };
+		el.ggDx=51;
+		el.ggDy=282;
+		el.ggParameter={ rx:0,ry:0,a:90,sx:1,sy:1 };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
@@ -5179,14 +5218,6 @@ function pano2vrSkin(player,base) {
 			me._transektenzeigen2.style.visibility='hidden';
 			me._transektenzeigen2.ggVisible=false;
 		}
-		me._transektenzeigen2.onmouseover=function (e) {
-			me._transektenzeigen2__img.style.visibility='hidden';
-			me._transektenzeigen2__imgo.style.visibility='inherit';
-		}
-		me._transektenzeigen2.onmouseout=function (e) {
-			me._transektenzeigen2__img.style.visibility='inherit';
-			me._transektenzeigen2__imgo.style.visibility='hidden';
-		}
 		me._transektenzeigen2.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
 				useTransition = false;
@@ -5204,6 +5235,448 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me._kartenmenu.appendChild(me._transektenzeigen2);
+		el=me._tempzeigen=document.createElement('div');
+		els=me._tempzeigen__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._tempzeigen__img.setAttribute('src',basePath + 'images/tempzeigen.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		elo=me._tempzeigen__imgo=document.createElement('img');
+		elo.className='ggskin ggskin_svg';
+		me._tempzeigen__imgo.setAttribute('src',basePath + 'images/tempzeigen__o.svg');
+		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
+		elo['ondragstart']=function() { return false; };
+		el.appendChild(elo);
+		el.ggId="+TempZeigen";
+		el.ggDx=103;
+		el.ggDy=278;
+		el.ggParameter={ rx:0,ry:0,a:90,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 34px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : inherit;';
+		hs+='width : 40px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		el.style[domTransform]=parameterToTransform(el.ggParameter);
+		me._tempzeigen.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._tempzeigen.onclick=function (e) {
+			me._temp.style[domTransition]='none';
+			me._temp.style.visibility=(Number(me._temp.style.opacity)>0||!me._temp.style.opacity)?'inherit':'hidden';
+			me._temp.ggVisible=true;
+			me._tempzeigen2.style[domTransition]='none';
+			me._tempzeigen2.style.visibility=(Number(me._tempzeigen2.style.opacity)>0||!me._tempzeigen2.style.opacity)?'inherit':'hidden';
+			me._tempzeigen2.ggVisible=true;
+		}
+		me._tempzeigen.onmouseover=function (e) {
+			me._tempzeigen__img.style.visibility='hidden';
+			me._tempzeigen__imgo.style.visibility='inherit';
+		}
+		me._tempzeigen.onmouseout=function (e) {
+			me._tempzeigen__img.style.visibility='inherit';
+			me._tempzeigen__imgo.style.visibility='hidden';
+		}
+		me._tempzeigen.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._tempzeigen);
+		el=me._tempzeigen2=document.createElement('div');
+		els=me._tempzeigen2__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._tempzeigen2__img.setAttribute('src',basePath + 'images/tempzeigen2.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="+TempZeigen2";
+		el.ggDx=103;
+		el.ggDy=278;
+		el.ggParameter={ rx:0,ry:0,a:90,sx:1,sy:1 };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 34px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : hidden;';
+		hs+='width : 40px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		el.style[domTransform]=parameterToTransform(el.ggParameter);
+		me._tempzeigen2.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._tempzeigen2.onclick=function (e) {
+			me._temp.style[domTransition]='none';
+			me._temp.style.visibility='hidden';
+			me._temp.ggVisible=false;
+			me._tempzeigen2.style[domTransition]='none';
+			me._tempzeigen2.style.visibility='hidden';
+			me._tempzeigen2.ggVisible=false;
+		}
+		me._tempzeigen2.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._tempzeigen2);
+		el=me._ttzeigen=document.createElement('div');
+		els=me._ttzeigen__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._ttzeigen__img.setAttribute('src',basePath + 'images/ttzeigen.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		elo=me._ttzeigen__imgo=document.createElement('img');
+		elo.className='ggskin ggskin_svg';
+		me._ttzeigen__imgo.setAttribute('src',basePath + 'images/ttzeigen__o.svg');
+		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
+		elo['ondragstart']=function() { return false; };
+		el.appendChild(elo);
+		el.ggId="+TTZeigen";
+		el.ggDx=153;
+		el.ggDy=274;
+		el.ggParameter={ rx:0,ry:0,a:90,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 34px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : inherit;';
+		hs+='width : 40px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		el.style[domTransform]=parameterToTransform(el.ggParameter);
+		me._ttzeigen.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._ttzeigen.onclick=function (e) {
+			me._tt.style[domTransition]='none';
+			me._tt.style.visibility=(Number(me._tt.style.opacity)>0||!me._tt.style.opacity)?'inherit':'hidden';
+			me._tt.ggVisible=true;
+			me._ttzeigen2.style[domTransition]='none';
+			me._ttzeigen2.style.visibility=(Number(me._ttzeigen2.style.opacity)>0||!me._ttzeigen2.style.opacity)?'inherit':'hidden';
+			me._ttzeigen2.ggVisible=true;
+		}
+		me._ttzeigen.onmouseover=function (e) {
+			me._ttzeigen__img.style.visibility='hidden';
+			me._ttzeigen__imgo.style.visibility='inherit';
+		}
+		me._ttzeigen.onmouseout=function (e) {
+			me._ttzeigen__img.style.visibility='inherit';
+			me._ttzeigen__imgo.style.visibility='hidden';
+		}
+		me._ttzeigen.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._ttzeigen);
+		el=me._ttzeigen2=document.createElement('div');
+		els=me._ttzeigen2__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._ttzeigen2__img.setAttribute('src',basePath + 'images/ttzeigen2.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="+TTZeigen2";
+		el.ggDx=153;
+		el.ggDy=274;
+		el.ggParameter={ rx:0,ry:0,a:90,sx:1,sy:1 };
+		el.ggVisible=false;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 34px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : hidden;';
+		hs+='width : 40px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		el.style[domTransform]=parameterToTransform(el.ggParameter);
+		me._ttzeigen2.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._ttzeigen2.onclick=function (e) {
+			me._tt.style[domTransition]='none';
+			me._tt.style.visibility='hidden';
+			me._tt.ggVisible=false;
+			me._ttzeigen2.style[domTransition]='none';
+			me._ttzeigen2.style.visibility='hidden';
+			me._ttzeigen2.ggVisible=false;
+		}
+		me._ttzeigen2.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._ttzeigen2);
+		el=me._svg_21=document.createElement('div');
+		els=me._svg_21__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._svg_21__img.setAttribute('src',basePath + 'images/svg_21.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="Svg 2";
+		el.ggDx=-51;
+		el.ggDy=283;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 40px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : inherit;';
+		hs+='width : 34px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._svg_21.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._svg_21.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._svg_21);
+		el=me._svg_20=document.createElement('div');
+		els=me._svg_20__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._svg_20__img.setAttribute('src',basePath + 'images/svg_20.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="Svg 2";
+		el.ggDx=-103;
+		el.ggDy=279;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 40px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : inherit;';
+		hs+='width : 34px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._svg_20.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._svg_20.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._svg_20);
+		el=me._svg_2=document.createElement('div');
+		els=me._svg_2__img=document.createElement('img');
+		els.className='ggskin ggskin_svg';
+		me._svg_2__img.setAttribute('src',basePath + 'images/svg_2.svg');
+		els.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;');
+		els['ondragstart']=function() { return false; };
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="Svg 2";
+		el.ggDx=-153;
+		el.ggDy=274;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_svg ";
+		el.ggType='svg';
+		hs ='';
+		hs+='height : 40px;';
+		hs+='left : -10000px;';
+		hs+='position : absolute;';
+		hs+='top : -10000px;';
+		hs+='visibility : inherit;';
+		hs+='width : 34px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style[domTransform + 'Origin']='50% 50%';
+		me._svg_2.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._svg_2.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
+		}
+		me._kartenmenu.appendChild(me._svg_2);
 		me.divSkin.appendChild(me._kartenmenu);
 		el=me._kommenu=document.createElement('div');
 		el.ggId="KomMenu";
